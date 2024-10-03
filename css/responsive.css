@@ -1,0 +1,622 @@
+@media (max-width: 1300px) {}
+
+@media (max-width: 1120px) {}
+
+@media (max-width: 992px) {
+  .hero_area {
+    min-height: auto;
+  }
+
+  .custom_nav-container .navbar-nav {
+    padding-top: 15px;
+    align-items: center;
+  }
+
+
+  .custom_nav-container .navbar-nav .nav-item .nav-link {
+    padding: 5px 25px;
+    margin: 5px 0;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .slider_section {
+    padding: 2px 0; /* Reducir el padding */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .about_section .img-box {
+    margin-top: 45px;
+  }
+
+  .contact_section {
+    padding-bottom: 0;
+  }
+
+  .contact_section .heading_container {
+    padding-left: 15px;
+  }
+
+  .contact_section .map_container {
+    margin-top: 45px;
+  }
+
+  .contact_section .form_container {
+    padding: 0 15px;
+    margin: 0;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .header_section .header_top .contact_nav a span {
+    color: white;
+  }
+
+  @media (max-width: 768px) { /* texto en barra negra - header top */
+    .header_section .header_top .contact_nav a {
+        font-size: 12px; 
+    }
+}
+
+  .client_section .client_container {
+    width: 100%;
+  }
+
+  .client_section .box {
+    margin: 0;
+  }
+
+  .owl-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+  }
+
+  .client_section .owl-carousel .owl-nav .owl-prev,
+  .client_section .owl-carousel .owl-nav .owl-next {
+    position: unset;
+    margin: 0 2.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider_section .detail-box h1 {
+    font-size: 2rem;
+  }
+
+  .track_section form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .track_section form input {
+    width: 100%;
+  }
+
+  .track_section form button {
+    padding: 10px 60px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .service_section .box {
+    flex-direction: column;
+  }
+
+  .service_section .box .img-box {
+    justify-content: flex-start;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 376px) {}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+/* pagina comprar */
+
+/*  caja de  info de envio comprar */
+
+/* boton carrito, le desire  Agregar al */
+
+
+/* Estilos generales para dispositivos móviles */
+@media (max-width: 576px) {
+  .product-container {
+      padding: 10px;
+      flex-direction: column;
+  }
+
+  .product-image {
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .product-description {
+      padding: 10px;
+      text-align: center;
+  }
+
+  h1, h2 {
+      font-size: 1.5rem;
+  }
+
+  .price {
+      font-size: 1.2rem;
+  }
+
+  .form-group {
+      display: flex;
+      justify-content: center;
+  }
+
+  .btn-personalizado {
+      width: 100%;
+      margin-top: 10px;
+  }
+
+  .footer-content {
+      text-align: center;
+      padding: 10px 0;
+  }
+}
+
+/* info/footer seccion */
+@media (max-width: 768px) {
+  .info_section {
+      padding: 20px; /* Agrega padding general a la sección */
+  }
+  
+  .info_col {
+      margin-bottom: 20px; /* Agrega margen inferior entre columnas */
+  }
+
+  .info_contact h4,
+  .info_detail h4,
+  .info_link_box h4,
+  .info_col h4 {
+      margin-bottom: 15px; /* Espaciado entre el título y el contenido */
+  }
+
+  .info_links a {
+      margin-bottom: 10px; /* Espaciado entre los enlaces */
+  }
+
+  form input[type="text"] {
+      width: 100%; /* Asegura que el campo de texto ocupe el 100% del ancho */
+      margin-bottom: 10px; /* Espaciado entre el campo de texto y el botón */
+  }
+
+  form button {
+      width: 100%; /* Asegura que el botón ocupe el 100% del ancho */
+  }
+}
+
+
+/* margenes seccion le desire tradic... Home */
+
+/* Estilos por defecto para móviles */
+.heading_container .p  {
+  padding: 10px; /* Espacio interno */
+  margin: 0 32px; /* Espacio externo a los lados */
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .heading_container p {
+    margin: 0 26px; /* Espacio externo a los lados */
+  }
+}
+
+
+
+.heading_container {
+  margin-left: 8px; /* Margen izquierdo por defecto */
+}
+
+/* Para pantallas más grandes, por ejemplo, a partir de 768px, ajusta el margen */
+@media (min-width: 768px) {
+  .heading_container {
+      margin-left: 16px; /* Aumenta el margen en pantallas más grandes */
+  }
+}
+
+/* Para pantallas más pequeñas, puedes reducir el margen si es necesario */
+@media (max-width: 480px) {
+  .heading_container {
+      margin-left: 4px; /* Reduce el margen en pantallas pequeñas */
+  }
+
+
+
+/* Estilos generales para contenedor de productos */
+
+
+/* Para dispositivos móviles */
+@media (max-width: 576px) {
+  .product-container {
+      flex-direction: column;
+  }
+
+  .product-image, .product-description {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .product-description {
+      text-align: center;
+  }
+
+}
+/* Para tablets */
+@media (min-width: 576px) and (max-width: 768px) {
+  .product-container {
+      flex-direction: column;
+  }
+
+  .product-image, .product-description {
+      width: 90%;
+      margin: 0 auto;
+  }
+
+  .product-description {
+      text-align: center;
+  }
+
+}
+
+/* Para desktops */
+@media (min-width: 768px) {
+  .product-container {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 20px;
+  }
+
+  .product-image {
+      flex: 1;
+      max-width: 45%;
+  }
+
+  .product-description {
+      flex: 1;
+      max-width: 50%;
+      padding-left: 20px;
+      text-align: left;
+  }
+
+}
+
+  .btn-personalizado {
+      margin-right: 10px;
+  }
+
+
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+
+
+/* boton comprar  Agregar al carrito - cantidad ledesire.html */
+
+/* Para dispositivos móviles */
+/* Para dispositivos móviles */
+@media (max-width: 576px) {
+  .cantidadcaja {
+      margin: 0 auto;  /* Centra el elemento horizontalmente */
+      width: 90%;         
+      max-width: 300px;   
+  }
+}
+
+
+  /* Clase personalizada para centrar solo en móviles imagen trufas lata home */
+
+  @media (max-width: 576px) {
+  
+    .img1colon img {
+     margin: 0px -30px;             
+    }
+}
+
+
+
+@media (max-width: 576px) {
+  
+  .img2colon img {
+   margin: 0px 0.8rem; 
+   margin-right: 1rem;            
+  }
+}
+
+
+@media (max-width: 360px) {
+  
+  .img1colon img {
+   margin: 0px -30px;             
+  }
+}
+
+/* imagens en home  */
+
+@media (max-width: 360px) {
+
+.img2colon img {
+ margin: 0px 0.8rem; 
+ margin-right: 1rem;            
+}
+}
+
+
+/* ------- margenes para seccion total  en le desire --------- */
+
+@media only screen and (max-width: 768px) {
+  #carrito, #total {
+    margin-right: 3.6rem; /* Ajusta este valor según lo necesites */
+    margin-left: 0px; /* Opcional: margen a la izquierda para mayor separación */
+  }
+}
+
+/* flechas slider ledesire.html */
+.ArrowLeft {
+  left: 10px; /* Posición a la izquierda */
+}
+
+.ArrowRight {
+  right: 10px; /* Posición a la derecha */
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .ArrowLeft, .ArrowRight {
+      font-size: 24px; /* Ajustar el tamaño de las flechas en móviles */
+      left: 350px; /* Espacio desde el borde izquierdo */
+      right: 5px; /* Espacio desde el borde derecho */
+  }
+}
+
+
+.img-1 {
+  width: 100px; /* imagen redonda en home  */
+  height: 100px; /* Asegúrate de que sea igual a la anchura para que sea redonda */
+  border-radius: 50%; /* Esto hace que la imagen sea redonda */
+  object-fit: cover; /* Esto asegura que la imagen se recorte correctamente */
+}
+
+/* ----------- Estilo ledesire.html ----------- */
+
+@font-face {
+  font-family: 'FuturaLight';
+  src: url('../fonts/futura-light.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+.comferre-decorative {
+    font-family: 'Cinzel Decorative';
+    font-size: 22px;
+}
+
+.container h3 {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #333333c9;
+}
+
+.container h4 {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #555555e0;
+}
+
+.container p {
+    font-size: 0.95em;
+    color: #666;
+    font-family: 'FuturaLight';
+}
+
+
+/* Estilos para pantallas pequeñas (móviles) */
+
+
+.table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-family: 'FuturaLight';
+}
+
+.table th {
+    background-color: #f8f9fa;
+    color: #333333ab;
+}
+
+.table td {
+    color: #555555c0;
+}
+
+.truffle-description {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-details {
+width: 100%; 
+margin: 0 auto; 
+box-sizing: border-box; 
+overflow-wrap: break-word; 
+white-space: normal; 
+}
+
+/* Media Queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+.product-details p {
+  font-size: 0.9em; 
+  line-height: 1.4;  
+  width: 70%;
+  margin: 0 8px;
+}
+}
+
+
+
+.truffle-description {
+  padding: 20px; /* Ajusta el padding del contenedor */
+}
+.truffle-description {
+display: flex; /* Cambia a flexbox */
+flex-direction: column; /* Coloca los elementos en una columna */
+align-items: center; /* Centra el contenido */
+justify-content: center; /* Alinea verticalmente */
+padding: 20px;
+width: 100%;
+box-sizing: border-box;
+}
+
+
+
+@media (max-width: 768px) {
+  .truffle-description, .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .truffle-description h2,
+  .container h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    order: -1; /* Asegura que el título aparezca en la parte superior */
+  }
+
+  .table-responsive {
+    width: 100%;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .table th, .table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 10px;
+    border: none;
+  }
+
+  .table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .table td {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .table tr {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+    .product-container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .product-description {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .product-image {
+        margin-bottom: 20px;
+    }
+
+    .product-description h1 {
+        font-size: 1.8rem;
+    }
+
+    .product-description h2 {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+/* detalles acordeon sabores container  */
+
+
+ 
+@media (max-width: 768px) {
+  .sabores-container {
+      padding: 10px; /* Ajustar el padding en pantallas más pequeñas */
+  }
+  .sabores-container .price {
+      font-size: 1.5em; /* Aumentar el tamaño de la fuente en pantallas pequeñas */
+  }
+}
+
+
+/* trilogia titulo de lata le desire.html */
+ /* Estilos para dispositivos móviles */
+ @media only screen and (max-width: 768px) {
+  .product-descriptionx h1,
+  .product-descriptionx h2 {
+    max-width: 90%; /* Ajusta el ancho máximo para evitar cortes */
+    margin: 0 auto; /* Centra el contenedor */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-descriptionx {
+      margin-left: 10px; 
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .stars
+  {
+    
+    margin-right: 5px;
+  }
+}
+}
