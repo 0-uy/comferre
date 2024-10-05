@@ -707,7 +707,7 @@ a:focus {
   font-weight: bold; 
 }
 
-.text-backgroundx h2 {
+.text-backgroundx h2  {
   background-image: url('../images/gold2.jpg'); 
   background-position: center; 
   -webkit-background-clip: text; /* Para navegadores webkit */
@@ -716,6 +716,10 @@ a:focus {
   font-size: 48px; /* Tamaño de fuente */
   font-weight: bold; /* Peso de fuente */
 }
+
+
+
+
 
 .text-backgroundabout h2 {
   background-image: url('../images/gold2.jpg'); 
@@ -1098,7 +1102,7 @@ a:focus {
 }
 
 .info_section {
-  background-color: #252323;  /* footer color */
+  background-color: #080808;  /* footer color */
   color: #ffffff;
   padding: 45px 0 15px 0;
   font-family: 'FuturaLight', Helvetica, sans-serif; 
@@ -1239,7 +1243,7 @@ a:focus {
   text-align: center;
   display: inline-block;
   padding: 10px 55px;
-  background-color: #010a0c;
+  background-color: #91752a;
   color: #ffffff;
   border-radius: 0;
   -webkit-transition: all .3s;
@@ -1249,7 +1253,7 @@ a:focus {
 }
 
 .info_section form button:hover {
-  background-color: #91752a;
+  background-color: #6caf20;
 }
 
 /* footer section*/
