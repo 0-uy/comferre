@@ -322,7 +322,9 @@ summary {
         .nav-links a:hover {
             color: #e0a800;
         }
+    
         .hero {
+    background-color: rgba(0, 0, 0, 0.8); /* Color de fondo de respaldo */
     background-image: url('images/nnno.png');
     background-size: cover;
     background-position: center;
@@ -337,18 +339,10 @@ summary {
 }
 
 @keyframes fade {
-    0% {
-        background-image: url('images/nnno.png');
-    }
-    33% {
-        background-image: url('images/nopa.jpeg');
-    }
-    66% {
-        background-image: url('images/mixednoel.jpg');
-    }
-    100% {
-        background-image: url('images/nnno.png'); /* Vuelve a la primera imagen */
-    }
+    0%, 25% { background-image: url('images/nnno.png'); }
+    33%, 58% { background-image: url('images/nopa.jpeg'); }
+    66%, 91% { background-image: url('images/mixednoel.jpg'); }
+    100% { background-image: url('images/nnno.png'); }
 }
 
 .hero::after {
@@ -361,6 +355,7 @@ summary {
     background: rgba(102, 60, 60, 0.13);
     z-index: 1;
 }
+
 
 .hero-content {
     position: relative;
