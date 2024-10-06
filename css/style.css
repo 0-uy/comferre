@@ -718,6 +718,16 @@ a:focus {
 }
 
 
+.text-backgroundx h1  {
+  background-image: url('../images/gold'); 
+  background-position: center; 
+  -webkit-background-clip: text; /* Para navegadores webkit */
+  background-clip: text; /* Para otros navegadores */
+  color: transparent; /* Hace que el color del texto sea transparente */
+  font-size: 48px; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de fuente */
+}
+
 
 
 

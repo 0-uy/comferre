@@ -22,6 +22,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Bootstrap CSS -->
 
   <!-- Font Awesome Style -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
@@ -109,12 +110,23 @@
 }
 
 .noel-page {
-  background-color: #e61e1e; /* Color de fondo */
+  background-color: #b91d1d; /* Color de fondo */
   background-image: url('ruta/de/tu/imagen.jpg'); /* Imagen de fondo */
   background-size: cover; /* Para que la imagen cubra todo el fondo */
   background-position: center; /* Centrar la imagen de fondo */
   background-repeat: no-repeat; /* No repetir la imagen */
 }
+
+/* slider noel */
+.carousel-item {
+    height: 85vh; /* Ajusta la altura del slider */
+}
+
+.carousel-item img {
+    object-fit: cover; /* Asegura que las imágenes cubran todo el espacio */
+    height: 100%;
+}
+
 
 /* Contenedor principal */
 .container.product-container {
@@ -323,51 +335,10 @@ summary {
             color: #e0a800;
         }
     
-        .hero {
-    background-color: rgba(0, 0, 0, 0.8); /* Color de fondo de respaldo */
-    background-image: url('images/nnno.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: background-image 1s ease-in-out;
-    color: white;
-    position: relative;
-    animation: fade 15s infinite; /* Duración del slider */
-}
-
-@keyframes fade {
-    0%, 25% { background-image: url('images/nnno.png'); }
-    33%, 58% { background-image: url('images/nopa.jpeg'); }
-    66%, 91% { background-image: url('images/mixednoel.jpg'); }
-    100% { background-image: url('images/nnno.png'); }
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(102, 60, 60, 0.13);
-    z-index: 1;
-}
-
-
-.hero-content {
-    position: relative;
-    margin-top: -0.7rem;
-    z-index: 2;
-}
-
 
 .image-section {
     width: 100vw; /* Full width of the viewport */
-    height: 50vh; /* Adjust height for desktop screens */
+    height: auto; /* Adjust height for desktop screens */
     overflow: hidden; /* Prevents overflow */
     display: flex;
     justify-content: center;
@@ -379,6 +350,10 @@ summary {
     width: 100%; /* Full width of the container */
     height: auto; /* Maintain the image's aspect ratio */
     object-fit: contain; /* Ensure the entire image is visible without cropping */
+    object-position: center; /* Center the image within the container */
+    max-width: 100%; /* Limit the width of the container */
+    max-height: 1200px; /* Limit the height of the container */
+    
 }
 
 /* Media query for mobile */
@@ -488,13 +463,38 @@ summary {
 <body>
 
     <main>
-        <section class="hero">
-            <div class="hero-content text-backgroundx ">
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/nopa.jpeg" class="d-block w-100" alt=" the noel collection trufas de chocolate">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/mixednoel.JPG" class="d-block w-100" alt="comfere trufas chocolates finos">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/noeltable.PNG" class="d-block w-100" alt="regalos chocolate navidad comferre ">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        
+            <!-- Texto y botón -->
+
+            <div class="carousel-caption d-none d-md-block text-backgroundx">
                 <h1>The Noël Collection</h1>
                 <p>Una trilogía de sabor y felicidad para esta Navidad</p>
-                <button class="cta-button">Descubre la Magia</button>              
+                <button class="btn btn-primary cta-button">Descubre la Magia</button>
             </div>
-        </section>
+        </div>
+        
+        
 
         <script>
             document.querySelector(".cta-button").addEventListener("click", function() {
@@ -749,10 +749,8 @@ summary {
 </section>
 
 <section class="image-section">
-    <img src="images/noel.JPG" alt="The noel collection, trufas finas de chocolate">
+    <img src="images/blacknoel.png" alt="The noel collection, trufas finas de chocolate">
 </section>
-
-
 
 <hr>
 <section class="mb-4">
@@ -850,120 +848,6 @@ summary {
     </footer>
   
 
-    <script>
-        const carrito = [];
-    
-        function agregarAlCarrito(producto, precio) {
-            const cantidad = parseInt(document.getElementById('cantidad').value);
-            const productoExistente = carrito.find(item => item.producto === producto);
-    
-            if (productoExistente) {
-                productoExistente.cantidad += cantidad;
-                productoExistente.total = productoExistente.cantidad * precio;
-            } else {
-                const totalProducto = cantidad * precio;
-                carrito.push({ producto, cantidad, total: totalProducto });
-            }
-    
-            actualizarCarritoUI();
-        }
-    
-        function actualizarCarritoUI() {
-            document.getElementById('carrito').innerHTML = carrito.map(item =>
-                `${item.cantidad} x ${item.producto} - $${item.total}`
-            ).join('<br>');
-    
-            const total = carrito.reduce((sum, item) => sum + item.total, 0);
-            document.getElementById('total').innerHTML = `&nbsp;&nbsp;  Total: $${total}`;
-        }
-    
-        function vaciarCarrito() {
-            carrito.length = 0;
-            actualizarCarritoUI();
-        }
-    
-        function pagar() {
-            const totalCantidad = carrito.reduce((sum, item) => sum + item.cantidad, 0);
-    
-            if (totalCantidad > 0 && totalCantidad <= 10) {
-                // Mostrar el formulario de información del cliente
-                document.getElementById('customerInfoForm').style.display = 'block';
-                // Ocultar los botones de Vaciar Carrito y Pagar
-                document.getElementById('btnVaciarCarrito').style.display = 'none';
-                document.getElementById('btnPagar').style.display = 'none';
-            } else {
-                alert('Por favor, selecciona una cantidad válida entre 1 y 10.');
-            }
-        }
-    
-        function procesarPago(event) {
-            event.preventDefault();
-    
-            const customerName = document.getElementById('customerName').value;
-            const customerSurname = document.getElementById('customerSurname').value;
-            const customerEmail = document.getElementById('customerEmail').value;
-            const customerPhone = document.getElementById('customerPhone').value;
-            const customerAddress = document.getElementById('customerAddress').value;
-    
-            const totalCantidad = carrito.reduce((sum, item) => sum + item.cantidad, 0);
-            const total = carrito.reduce((sum, item) => sum + item.total, 0);
-            const orderCode = generarCodigoOrden(); // Generar código de orden
-    
-            const formData = {
-                customerName,
-                customerSurname,
-                customerEmail,
-                customerPhone,
-                customerAddress,
-                totalCantidad,
-                total,
-                orderCode // Incluyendo el código de orden en los datos
-            };
-    
-            // Enviar datos por Formspree
-            fetch('https://formspree.io/f/mblrnean', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => {
-                if (response.ok) {
-                    alert('Datos enviados con éxito, redirigiendo a Mercado Pago... PRESIONE OK PARA CONTINUAR');
-    
-                    let enlacePago;
-                    switch (totalCantidad) {
-                        case 1: enlacePago = 'https://mpago.la/33R3ZHc'; break;
-                        case 2: enlacePago = 'https://mpago.la/1ZKbi17'; break;
-                        case 3: enlacePago = 'https://mpago.la/1mH7uJX'; break;
-                        case 4: enlacePago = 'https://mpago.la/1foAWJ5'; break;
-                        case 5: enlacePago = 'https://mpago.la/1ebmgGW'; break;
-                        case 6: enlacePago = 'https://mpago.la/27jUeSG'; break;
-                        case 7: enlacePago = 'https://mpago.la/15xGTVH'; break;
-                        case 8: enlacePago = 'https://mpago.la/18e2CDQ'; break;
-                        case 9: enlacePago = 'https://mpago.la/2F4m5dZ'; break;
-                        case 10: enlacePago = 'https://mpago.la/2ysybZP'; break;
-                    }
-    
-                    window.location.href = enlacePago;
-                } else {
-                    alert('Error al enviar los datos, por favor inténtelo de nuevo.');
-                }
-            })
-            .catch(error => {
-                console.error('Error al procesar el pago:', error);
-                alert('Ocurrió un error al procesar el pago.');
-            });
-        }
-    
-        function generarCodigoOrden() {
-            const numeroRandom = Math.floor(Math.random() * 100000); // Número entre 0 y 99999
-            const letrasRandom = String.fromCharCode(65 + Math.floor(Math.random() * 26)) +
-                                String.fromCharCode(65 + Math.floor(Math.random() * 26)); // Dos letras aleatorias
-            return `${numeroRandom}${letrasRandom}`;
-        }
-    </script>
     
  
  <!-- popper js -->
@@ -971,7 +855,8 @@ summary {
 </script>
 <!-- bootstrap js -->
 <script type="text/javascript" src="js/bootstrap.js"></script>
-<script src="js/slider.js"></script>
+<script type="text/javascript" src="js/noelpay.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
 <!-- owl slider -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
 </script>
@@ -979,6 +864,8 @@ summary {
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Bootstrap CSS -->
+
 
 
   <script>
